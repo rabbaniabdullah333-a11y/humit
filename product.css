@@ -1,0 +1,653 @@
+/* ==========================================================================
+   HUMI'S HOME KITCHEN — PRODUCT DETAIL PAGE STYLES (product.css)
+   "Homemade Taste, Made with Love."
+   ========================================================================== */
+
+/* --- 1. BREADCRUMB NAVIGATION --- */
+.product-breadcrumb-bar {
+  background: var(--color-cream-bg);
+  border-bottom: 1px solid var(--color-cream-border);
+  padding: 1rem 0;
+  margin-top: var(--header-height);
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-brown-muted);
+}
+
+.breadcrumb-item a {
+  color: var(--color-brown-dark);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb-item a:hover {
+  color: var(--color-terracotta);
+}
+
+.breadcrumb-separator {
+  color: var(--color-gold-subtle);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.breadcrumb-item.active {
+  color: var(--color-terracotta);
+  font-weight: 700;
+}
+
+/* --- 2. PRODUCT DETAIL SHOWCASE SECTION --- */
+.product-detail-section {
+  padding: 3.5rem 0 4rem 0;
+  background: var(--color-cream-light);
+  position: relative;
+}
+
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* --- LEFT COLUMN: IMAGE & GALLERY --- */
+.product-media-col {
+  position: sticky;
+  top: calc(var(--header-height) + 2rem);
+}
+
+.product-main-img-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: #fff;
+  border: 1px solid var(--color-cream-border);
+}
+
+.product-main-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.product-main-img-wrapper:hover .product-main-img {
+  transform: scale(1.04);
+}
+
+.product-media-badges {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.product-cat-pill {
+  display: inline-block;
+  background: rgba(36, 22, 15, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+}
+
+.product-prep-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  color: var(--color-brown-deep);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+/* Trust features bar under image */
+.product-trust-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.trust-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fff;
+  border: 1px solid var(--color-cream-border);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.trust-feature-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.trust-feature-text strong {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-brown-deep);
+}
+
+.trust-feature-text span {
+  font-size: 0.75rem;
+  color: var(--color-brown-muted);
+}
+
+/* --- RIGHT COLUMN: PRODUCT INFO & PURCHASE --- */
+.product-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-green-soft);
+  background: rgba(59, 98, 71, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
+
+.product-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-gold-subtle);
+}
+
+.product-rating span {
+  color: var(--color-brown-muted);
+  font-size: 0.78rem;
+}
+
+.product-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  color: var(--color-brown-deep);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.product-serving-sub {
+  font-size: 0.95rem;
+  color: var(--color-brown-muted);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+/* Price Box */
+.product-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid var(--color-cream-border);
+  padding: 1.15rem 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.product-price-current {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  line-height: 1;
+}
+
+.product-price-note {
+  font-size: 0.85rem;
+  color: var(--color-brown-muted);
+}
+
+/* Description */
+.product-desc-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-brown-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* Specs Box (e.g. 1 kg rice + 1 kg beef) */
+.product-specs-alert {
+  background: rgba(212, 175, 55, 0.12);
+  border-left: 4px solid var(--color-gold-subtle);
+  padding: 0.85rem 1.25rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-brown-deep);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Portion Selector */
+.product-portion-section {
+  margin-bottom: 1.5rem;
+}
+
+.portion-section-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-brown-deep);
+  margin-bottom: 0.65rem;
+  display: block;
+}
+
+.portion-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.portion-option-card {
+  border: 2px solid var(--color-cream-border);
+  background: #fff;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.portion-option-card:hover {
+  border-color: var(--color-terracotta);
+}
+
+.portion-option-card.selected {
+  border-color: var(--color-terracotta);
+  background: rgba(200, 90, 50, 0.04);
+  box-shadow: 0 0 0 1px var(--color-terracotta);
+}
+
+.portion-opt-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-brown-deep);
+  display: block;
+}
+
+.portion-opt-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  margin: 0.25rem 0;
+  display: block;
+}
+
+.portion-opt-desc {
+  font-size: 0.78rem;
+  color: var(--color-brown-muted);
+}
+
+/* Quantity & Action Buttons */
+.product-actions-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-cream-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.qty-and-cart-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.product-qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-cream-bg);
+  border: 1.5px solid var(--color-cream-border);
+  border-radius: var(--radius-pill);
+  height: 52px;
+  padding: 0 0.5rem;
+  flex-shrink: 0;
+}
+
+.product-qty-stepper .qty-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 1.25rem;
+}
+
+.product-qty-stepper .qty-val {
+  min-width: 40px;
+  font-size: 1.15rem;
+}
+
+.btn-detail-add-cart {
+  flex-grow: 1;
+  height: 52px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.btn-detail-buy-now {
+  height: 52px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-brown-deep), var(--color-brown-dark));
+  color: #fff;
+}
+
+.btn-detail-buy-now:hover {
+  background: var(--color-brown-deep);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-detail-whatsapp {
+  height: 52px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* Kitchen Checklist */
+.product-kitchen-checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: var(--color-cream-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-cream-border);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-brown-dark);
+}
+
+.checklist-item span {
+  color: var(--color-green-soft);
+  font-size: 1rem;
+}
+
+/* --- 3. DEDICATED FOOD VIDEO SECTION --- */
+.product-video-section {
+  padding: 4.5rem 0;
+  background: linear-gradient(180deg, var(--color-cream-light) 0%, var(--color-cream-bg) 100%);
+  border-top: 1px solid var(--color-cream-border);
+  border-bottom: 1px solid var(--color-cream-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.video-section-header .section-badge {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.video-section-header h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-brown-deep);
+  margin-bottom: 0.75rem;
+}
+
+.video-section-header p {
+  font-size: 1rem;
+  color: var(--color-brown-muted);
+}
+
+.video-player-container {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(36, 22, 15, 0.2);
+  border: 2px solid var(--color-cream-border);
+  background: #000;
+}
+
+.video-player-container video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+}
+
+/* Video Overlay Controls */
+.video-overlay-banner {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: rgba(36, 22, 15, 0.8);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 3;
+}
+
+.video-play-center-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(200, 90, 50, 0.92);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: 3;
+}
+
+.video-play-center-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: var(--color-terracotta-hover);
+}
+
+.video-player-container.is-playing .video-play-center-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Video Highlights Row */
+.video-highlights-grid {
+  max-width: 960px;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.video-highlight-card {
+  background: #fff;
+  border: 1px solid var(--color-cream-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast);
+}
+
+.video-highlight-card:hover {
+  transform: translateY(-4px);
+}
+
+.video-highlight-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.video-highlight-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-brown-deep);
+  margin-bottom: 0.35rem;
+}
+
+.video-highlight-desc {
+  font-size: 0.8rem;
+  color: var(--color-brown-muted);
+  line-height: 1.5;
+}
+
+/* --- 4. RELATED DISHES SECTION --- */
+.product-related-section {
+  padding: 4rem 0;
+  background: var(--color-cream-bg);
+}
+
+.related-section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.related-section-header h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  color: var(--color-brown-deep);
+  margin-bottom: 0.5rem;
+}
+
+.related-section-header p {
+  color: var(--color-brown-muted);
+}
+
+/* Food Card Links on product page & index */
+.card-media-link, .card-title-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.card-title-link:hover {
+  color: var(--color-terracotta);
+}
+
+.btn-card-detail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-terracotta);
+  background: rgba(200, 90, 50, 0.08);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-card-detail:hover {
+  background: var(--color-terracotta);
+  color: #fff;
+}
+
+/* --- 5. RESPONSIVE BREAKPOINTS --- */
+@media (max-width: 991px) {
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .product-media-col {
+    position: static;
+  }
+
+  .video-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-trust-features {
+    grid-template-columns: 1fr;
+  }
+
+  .qty-and-cart-row {
+    flex-direction: column;
+  }
+
+  .product-qty-stepper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .portion-options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-price-current {
+    font-size: 1.85rem;
+  }
+
+  .product-title {
+    font-size: 1.75rem;
+  }
+}

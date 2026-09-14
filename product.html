@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dish Details | Humi’s Home Kitchen | Fresh Homemade Pakistani Food</title>
+  
+  <!-- SEO & AEO Meta Tags -->
+  <meta name="description" content="Order freshly prepared homemade Pakistani food from Humi’s Home Kitchen. Authentic taste, pure ingredients, cooked fresh upon order with fast delivery across Islamabad & Rawalpindi." />
+  <meta name="author" content="Humi’s Home Kitchen" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+  <link rel="stylesheet" href="./css/product.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       1. ANNOUNCEMENT TOP BAR
+       ========================================== -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="container announcement-container">
+      <div class="announcement-item">
+        <span>✨ <strong>Fresh Daily Batches:</strong> Prepared with Pure Desi Spices & Motherly Care</span>
+      </div>
+      <div class="announcement-item">
+        <span>🛵 <strong>Free Delivery</strong> on orders above Rs. 2,500</span>
+      </div>
+      <div class="announcement-item">
+        <span>📞 WhatsApp Orders: <a href="https://wa.me/923155074225" target="_blank" rel="noopener" class="announcement-link">+92 315 5074225</a></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       2. NAVIGATION BAR
+       ========================================== -->
+  <header class="navbar" id="main-navbar">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Humi's Home Kitchen Home">
+        <img 
+          src="./assets/images/logo.png" 
+          alt="Humi’s Home Kitchen Official Logo" 
+          class="logo-img" 
+          style="height: 52px; width: auto; object-fit: contain; border-radius: 8px;"
+        />
+        <div class="brand-text">
+          <span class="brand-title">Humi’s Home Kitchen</span>
+          <span class="brand-subtitle">Homemade • Fresh</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#menu" class="nav-link active">Our Menu</a>
+        <a href="index.html#deals" class="nav-link">Special Deals</a>
+        <a href="index.html#about" class="nav-link">Our Story</a>
+        <a href="index.html#why-us" class="nav-link">Why Us</a>
+        <a href="index.html#gallery" class="nav-link">Gallery</a>
+        <a href="index.html#reviews" class="nav-link">Reviews</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Cart Drawer Trigger Button -->
+        <button type="button" class="nav-cart-btn open-cart-trigger" aria-label="View Shopping Cart">
+          <span>🛒</span>
+          <span class="cart-count-badge">0</span>
+        </button>
+
+        <!-- Direct WhatsApp CTA -->
+        <a href="https://wa.me/923155074225?text=Assalam-o-Alaikum%20Humi’s%20Home%20Kitchen%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm" id="nav-wa-cta">
+          <span>💬</span> Order on WhatsApp
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobile-menu-toggle" aria-label="Open Mobile Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <img src="./assets/images/logo.png" alt="Humi’s Home Kitchen Logo" style="height: 44px; width: auto;" />
+        <div class="brand-text">
+          <span class="brand-title" style="font-size: 1.15rem;">Humi’s Kitchen</span>
+          <span class="brand-subtitle">Homemade • Fresh</span>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" id="drawer-close" aria-label="Close Mobile Menu">✕</button>
+    </div>
+
+    <nav class="drawer-links">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="index.html#menu" class="drawer-link">Full Menu</a>
+      <a href="index.html#deals" class="drawer-link">Special Deals</a>
+      <a href="index.html#about" class="drawer-link">About Humi’s</a>
+      <a href="index.html#why-us" class="drawer-link">Why Choose Us</a>
+      <a href="index.html#gallery" class="drawer-link">Food Gallery</a>
+      <a href="index.html#reviews" class="drawer-link">Customer Reviews</a>
+      <a href="index.html#contact" class="drawer-link">Contact & WhatsApp</a>
+    </nav>
+
+    <div class="drawer-footer">
+      <a href="https://wa.me/923155074225?text=Assalam-o-Alaikum%20Humi’s%20Home%20Kitchen%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn btn-whatsapp btn-block">
+        <span>💬</span> Quick WhatsApp Order
+      </a>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <!-- ==========================================
+       3. BREADCRUMBS BAR
+       ========================================== -->
+  <div class="product-breadcrumb-bar">
+    <div class="container">
+      <ul class="breadcrumb-list" id="product-breadcrumbs">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item"><a href="index.html#menu">Our Menu</a></li>
+        <li class="breadcrumb-separator">›</li>
+        <li class="breadcrumb-item active" aria-current="page">Loading Dish...</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       4. PRODUCT DETAIL SHOWCASE
+       ========================================== -->
+  <main class="product-detail-section">
+    <div class="container">
+      
+      <div class="product-detail-grid">
+        
+        <!-- LEFT COLUMN: IMAGE & TRUST BADGES -->
+        <div class="product-media-col">
+          <div class="product-main-img-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" 
+              alt="Delicious homemade food" 
+              id="product-img" 
+              class="product-main-img" 
+            />
+            
+            <div class="product-media-badges">
+              <span class="product-cat-pill" id="product-cat-pill">Category</span>
+              <div id="product-badge-wrap"></div>
+            </div>
+
+            <div class="product-prep-badge" id="product-prep-badge">
+              ⏱️ Freshly Cooked
+            </div>
+          </div>
+
+          <!-- Trust Badges Under Image -->
+          <div class="product-trust-features">
+            <div class="trust-feature-item">
+              <span class="trust-feature-icon">🌿</span>
+              <div class="trust-feature-text">
+                <strong>100% Halal & Clean</strong>
+                <span>Freshly sourced daily</span>
+              </div>
+            </div>
+            <div class="trust-feature-item">
+              <span class="trust-feature-icon">👩‍🍳</span>
+              <div class="trust-feature-text">
+                <strong>Cooked to Order</strong>
+                <span>No pre-cooked leftovers</span>
+              </div>
+            </div>
+            <div class="trust-feature-item">
+              <span class="trust-feature-icon">📦</span>
+              <div class="trust-feature-text">
+                <strong>Sealed Packaging</strong>
+                <span>Spill-proof thermal box</span>
+              </div>
+            </div>
+            <div class="trust-feature-item">
+              <span class="trust-feature-icon">🛵</span>
+              <div class="trust-feature-text">
+                <strong>Fast City Delivery</strong>
+                <span>Islamabad & Rawalpindi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: DETAILS & ACTIONS -->
+        <div class="product-info-col">
+          
+          <div class="product-header-meta">
+            <span class="product-status-tag">● Fresh Batch Available</span>
+            <div class="product-rating">
+              ★★★★★ <span>(4.9 • 120+ Reviews)</span>
+            </div>
+          </div>
+
+          <h1 class="product-title" id="product-title">Loading Dish Name...</h1>
+          <p class="product-serving-sub" id="product-serving-sub">Standard Homemade Portion</p>
+
+          <!-- Dynamic Price Box -->
+          <div class="product-price-box">
+            <span class="product-price-current" id="product-price-current">Rs. 0</span>
+            <span class="product-price-note" id="product-price-note">(Standard Portion)</span>
+          </div>
+
+          <!-- Specs Alert (if item has special weights/specs) -->
+          <div class="product-specs-alert" id="product-specs-alert" style="display: none;"></div>
+
+          <!-- Description -->
+          <p class="product-desc-text" id="product-desc">
+            Authentic homemade dish prepared with traditional spices and genuine care.
+          </p>
+
+          <!-- Portion Selector (Half vs Full) -->
+          <div class="product-portion-section" id="product-portion-section" style="display: none;"></div>
+
+          <!-- Actions Block: Quantity, Add to Cart, Buy Now, WhatsApp -->
+          <div class="product-actions-block">
+            
+            <div class="qty-and-cart-row">
+              <div class="product-qty-stepper" aria-label="Quantity selector">
+                <button type="button" class="qty-btn" id="product-qty-dec" aria-label="Decrease quantity">−</button>
+                <span class="qty-val" id="product-qty-val">1</span>
+                <button type="button" class="qty-btn" id="product-qty-inc" aria-label="Increase quantity">+</button>
+              </div>
+
+              <button type="button" class="btn btn-primary btn-detail-add-cart" id="btn-detail-add-cart">
+                <span>🛒</span> Add to Cart
+              </button>
+            </div>
+
+            <button type="button" class="btn btn-detail-buy-now" id="btn-detail-buy-now">
+              <span>⚡</span> Buy Now (Instant Checkout)
+            </button>
+
+            <button type="button" class="btn btn-whatsapp btn-detail-whatsapp" id="btn-detail-whatsapp">
+              <span>💬</span> Order on WhatsApp (+92 315 5074225)
+            </button>
+
+          </div>
+
+          <!-- Kitchen Quality Guarantee Checklist -->
+          <div class="product-kitchen-checklist">
+            <div class="checklist-item">
+              <span>✓</span> Pure Cooking Oil / Desi Ghee
+            </div>
+            <div class="checklist-item">
+              <span>✓</span> Fresh Poultry & Vegetables
+            </div>
+            <div class="checklist-item">
+              <span>✓</span> Custom Spice Level on Request
+            </div>
+            <div class="checklist-item">
+              <span>✓</span> Made with Mother's Love
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================
+       5. DEDICATED FOOD VIDEO SECTION
+       ========================================== -->
+  <section class="product-video-section" id="food-video-section">
+    <div class="container">
+      
+      <div class="video-section-header">
+        <span class="section-badge">Kitchen Video</span>
+        <h2>See How We Cook Fresh With Love</h2>
+        <p>Watch our authentic cooking process: pure hand-picked spices, fresh cuts of meat, aromatic dum, and spotless home hygiene.</p>
+      </div>
+
+      <!-- Video Player Container -->
+      <div class="video-player-container" id="video-player-container">
+        
+        <div class="video-overlay-banner">
+          <span>📹</span> Humi's Kitchen Live Preparation
+        </div>
+
+        <button type="button" class="video-play-center-btn" id="video-play-btn" aria-label="Play cooking video">
+          ▶
+        </button>
+
+        <video 
+          id="product-cooking-video"
+          playsinline 
+          loop 
+          controls
+          poster="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80"
+        >
+          <!-- Royalty-free HD Food Preparation Video Stream -->
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-chef-cooking-vegetables-and-meat-in-a-pan-43093-large.mp4" type="video/mp4" />
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-chef-preparing-a-dish-42616-large.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+
+      </div>
+
+      <!-- Highlights Under Video -->
+      <div class="video-highlights-grid">
+        <div class="video-highlight-card">
+          <div class="video-highlight-icon">🔥</div>
+          <div class="video-highlight-title">Traditional Slow Cooking</div>
+          <div class="video-highlight-desc">Cooked over low flame with authentic desi spices to let rich flavors penetrate every fiber.</div>
+        </div>
+
+        <div class="video-highlight-card">
+          <div class="video-highlight-icon">✨</div>
+          <div class="video-highlight-title">Spotless Kitchen Hygiene</div>
+          <div class="video-highlight-desc">Sterilized cookware, clean drinking water, and strictly sanitary preparation standards.</div>
+        </div>
+
+        <div class="video-highlight-card">
+          <div class="video-highlight-icon">🍲</div>
+          <div class="video-highlight-title">Served Steaming Hot</div>
+          <div class="video-highlight-desc">Packed immediately in thermal containers so your meal reaches you fresh, hot, and aromatic.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. RELATED DISHES SECTION
+       ========================================== -->
+  <section class="product-related-section">
+    <div class="container">
+      <div class="related-section-header">
+        <h2>You Might Also Love</h2>
+        <p>Explore more authentic dishes freshly prepared from the same category</p>
+      </div>
+
+      <div class="food-grid" id="related-dishes-grid">
+        <!-- Rendered dynamically by js/product.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <img src="./assets/images/logo.png" alt="Humi's Home Kitchen Logo" style="height: 52px; width: auto;" />
+            <div class="brand-text">
+              <span class="brand-title">Humi’s Home Kitchen</span>
+              <span class="brand-subtitle">Homemade Taste, Made with Love.</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Bringing authentic, healthy, and hygienically cooked homemade Pakistani food straight from our warm family kitchen to your dining table.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#menu">Full Menu</a></li>
+            <li><a href="index.html#deals">Family Deals</a></li>
+            <li><a href="index.html#about">Our Story</a></li>
+            <li><a href="index.html#reviews">Customer Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Order & Contact</h4>
+          <ul class="footer-links">
+            <li>💬 WhatsApp: <a href="https://wa.me/923155074225" target="_blank" rel="noopener">+92 315 5074225</a></li>
+            <li>📞 Phone: <a href="tel:+923155074225">+92 315 5074225</a></li>
+            <li>📍 Serving: Islamabad & Rawalpindi</li>
+            <li>⏰ Hours: 11:00 AM – 11:00 PM Daily</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Humi’s Home Kitchen. All rights reserved. Made with love for food lovers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       8. SHOPPING CART DRAWER
+       ========================================== -->
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart" aria-hidden="true">
+    <div class="cart-header">
+      <h3 class="cart-title">
+        <span>🛒</span> Your Order Basket
+      </h3>
+      <button type="button" class="cart-close-btn" id="cart-close" aria-label="Close Shopping Cart">✕</button>
+    </div>
+
+    <div class="cart-body">
+      <!-- Empty Cart State -->
+      <div class="cart-empty-wrapper" id="cart-empty-state">
+        <div class="cart-empty-icon">🍲</div>
+        <h4 class="cart-empty-title">Your basket is empty</h4>
+        <p class="cart-empty-desc">Explore our delicious homemade dishes and add your favorites!</p>
+        <a href="index.html#menu" class="btn btn-outline btn-sm" onclick="document.getElementById('cart-close').click()">
+          Browse Menu
+        </a>
+      </div>
+
+      <!-- Items List -->
+      <div id="cart-items-container"></div>
+    </div>
+
+    <div class="cart-footer" id="cart-footer" style="display: none;">
+      <div class="cart-delivery-hint" id="cart-delivery-note">
+        💡 Add Rs. 1,000 more for FREE Delivery!
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Subtotal:</span>
+        <span id="cart-subtotal">Rs. 0</span>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Estimated Delivery:</span>
+        <span id="cart-delivery">Rs. 150</span>
+      </div>
+
+      <div class="cart-summary-line total-line">
+        <span>Grand Total:</span>
+        <span id="cart-grand-total" style="color: var(--color-terracotta);">Rs. 0</span>
+      </div>
+
+      <div class="cart-footer-actions">
+        <button type="button" class="btn btn-whatsapp btn-block" id="btn-cart-checkout">
+          <span>💬</span> Proceed to WhatsApp Checkout
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-block" id="btn-clear-cart" style="color: var(--color-brown-muted);">
+          Clear Basket
+        </button>
+      </div>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+
+  <!-- ==========================================
+       9. CUSTOMER ORDER & WHATSAPP CHECKOUT MODAL
+       ========================================== -->
+  <div class="modal-overlay" id="order-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      
+      <div class="modal-header">
+        <h3 id="modal-title">Complete Your WhatsApp Order</h3>
+        <button type="button" class="modal-close" id="modal-close-btn" aria-label="Close Order Dialog">✕</button>
+      </div>
+
+      <form id="customer-order-form">
+        <div class="modal-body">
+          
+          <!-- Dynamic Order Summary Container -->
+          <div id="modal-order-summary"></div>
+
+          <div class="order-form-group">
+            <label class="order-form-label" for="customer-name">Full Name <span class="req">*</span></label>
+            <input type="text" id="customer-name" class="order-form-input" placeholder="e.g. Sarah Ahmed" required />
+          </div>
+
+          <div class="order-form-group">
+            <label class="order-form-label" for="customer-phone">Phone / WhatsApp Number <span class="req">*</span></label>
+            <input type="tel" id="customer-phone" class="order-form-input" placeholder="e.g. 03001234567" required />
+          </div>
+
+          <div class="order-form-group">
+            <label class="order-form-label" for="customer-city">City / Area <span class="req">*</span></label>
+            <select id="customer-city" class="order-form-select" required>
+              <option value="Islamabad">Islamabad</option>
+              <option value="Rawalpindi">Rawalpindi</option>
+            </select>
+          </div>
+
+          <div class="order-form-group">
+            <label class="order-form-label" for="customer-address">Complete Street Address & Landmark <span class="req">*</span></label>
+            <input type="text" id="customer-address" class="order-form-input" placeholder="House #, Street #, Sector / Phase" required />
+          </div>
+
+          <div class="order-form-group">
+            <label class="order-form-label" for="customer-notes">Special Instructions / Cooking Notes (Optional)</label>
+            <textarea id="customer-notes" class="order-form-textarea" placeholder="e.g. Medium spice, extra green chillies..."></textarea>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="modal-cancel-btn">Cancel</button>
+          <button type="submit" class="btn btn-whatsapp" id="modal-submit-btn">
+            <span>💬</span> Send Order via WhatsApp
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ==========================================
+       10. FLOATING ACTIONS & QUICK CONTROLS
+       ========================================== -->
+  <div class="floating-actions">
+    
+    <!-- Floating Cart Bar -->
+    <div class="float-cart-bar open-cart-trigger" id="floating-cart-btn" title="View Basket">
+      <span>🛒</span>
+      <span class="cart-count-badge">0</span>
+      <span id="float-cart-total" style="font-weight: 700; margin-left: 0.25rem;">Rs. 0</span>
+    </div>
+
+    <!-- Floating WhatsApp Quick Button -->
+    <a 
+      href="https://wa.me/923155074225?text=Assalam-o-Alaikum%20Humi’s%20Home%20Kitchen%2C%20I%20would%20like%20to%20place%20an%20order." 
+      target="_blank" 
+      rel="noopener" 
+      class="float-wa-btn" 
+      id="floating-wa-btn" 
+      aria-label="Chat on WhatsApp with Humi's Home Kitchen"
+    >
+      <span style="font-size: 1.25rem;">💬</span> Order on WhatsApp
+    </a>
+
+    <!-- Back to Top Button -->
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="Scroll back to top">↑</button>
+
+  </div>
+
+  <!-- Notification Toast Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- ==========================================
+       11. JAVASCRIPT MODULES
+       ========================================== -->
+  <script src="./js/config.js"></script>
+  <script src="./js/menu-data.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/whatsapp.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/product.js"></script>
+
+</body>
+</html>
